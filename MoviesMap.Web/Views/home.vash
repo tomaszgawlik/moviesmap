@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="moviesApp" class="full-screen">
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/default.css" />
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="lib/default.js"></script>
+    <script src="lib/SearchController.js"></script>
+</head>
+<body class="full-screen">
+    <div id="map-canvas" class="full-screen">
+    </div>
+    <div class="search" ng-controller="SearchController as search">
+        <input class="search-text" type="text" placeholder="London..." ng-model="search.searchQuery" />
+        <input class="search-button" type="button" value="Search" ng-click="search.searchForMovies()" />
+    </div>
+</body>
+</html>

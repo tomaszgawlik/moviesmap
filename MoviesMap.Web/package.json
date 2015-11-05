@@ -1,0 +1,14 @@
+{
+  "name": "MoviesMapWeb",
+  "version": "0.0.0",
+  "description": "MoviesMap Web",
+  "main": "server.js",
+  "author": {
+    "name": "Tomasz Kutyła, Tomasz Gawlik"
+  },
+  "dependencies": {
+    "angular": "^1.4.7",
+    "express": "^4.13.3",
+    "vash": "^0.10.0"
+  }
+}
