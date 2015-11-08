@@ -6,7 +6,7 @@
 		app.get("/", function (req, res) {
 			
 			service.testServiceFunction();
-	        res.render("home"); 
+	        res.render("homeView"); 
 		});
 	};
 })(module.exports);

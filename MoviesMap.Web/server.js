@@ -5,7 +5,6 @@ var controllers = require('./controllers');
 
 // set view engine
 app.set("view engine", "vash");
-
 // set public directory
 app.use(express.static(__dirname + "/public"));
 
