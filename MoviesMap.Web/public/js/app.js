@@ -1,13 +1,5 @@
-angular.module('moviesMapApp', [])
-  .controller('MapController', function() {
+angular.module('moviesMapApp', ['uiGmapgoogle-maps'])
+  .controller('MapController', function($scope) {
     
-    var map;
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map-canvas'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-    }
-    
-    initMap();
+    $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
   });
