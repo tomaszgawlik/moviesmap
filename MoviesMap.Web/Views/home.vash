@@ -5,8 +5,8 @@
  
      @html.block("page-main-content", function(model) {
      
-     <div np-app="mainModule">
-        <div np-controller="mapController" id="map-canvas" class="full-screen">
+     <div ng-controller="MapController as map" class="full-screen">
+        <div id="map-canvas" class="full-screen">
         </div>
         <!--<div class="search" ng-controller="SearchController as search">
             <input class="search-text" type="text" placeholder="London..." ng-model="search.searchQuery" />
@@ -17,8 +17,6 @@
     })
     
     @html.block("page-scripts", function(model) {
-    
-    <script src="/lib/js/mainModule.js"></script>
-    
+    <script src="/js/app.js"></script>
     })
  })
