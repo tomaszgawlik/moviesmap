@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="moviesMapApp">
 <head>
     <title>@model.Title</title>
     <meta charset="utf-8">
 
     <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link href="/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" >
-    <link href="/lib/css/site.css" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet">
     @html.block("page-css")
     
 </head>
-<body>
+<body class="full-screen">
 	@html.block("page-main-content")
 	
     <script src="/lib/jquery/dist/jquery.min.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/lib/angular/angular.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     @html.block("page-scripts")
 </body>
 </html>
