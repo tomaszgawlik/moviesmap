@@ -9,5 +9,9 @@
   "dependencies": {
     "express": "^4.13.3",
     "vash": "^0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4"
   }
 }
