@@ -5,11 +5,11 @@
  
      @html.block("page-main-content", function(model) {
 
-     <div ng-controller="SearchController as searchController" class="search-component form-group" >
+     <div id="search-component" ng-controller="SearchController as searchController" class="form-group" >
         <input id="search-text" class="form-control" type="text" placeholder="London..." ng-model="searchQuery" />
         <input id="search-button" class="btn btn-primary" type="button" value="Search" ng-click="searchForMovies()" />
       </div>
-     <div ng-controller="MapController as mapController" class="full-screen">
+     <div id="map-component" ng-controller="MapController as mapController">
         <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
      </div>
 
