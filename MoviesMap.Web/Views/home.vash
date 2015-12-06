@@ -1,23 +1,21 @@
  @html.extend('layout', function(model) {
- 
     @html.block("page-css", function(model) {
         <link href="/css/home.css" rel="stylesheet">
     })
  
      @html.block("page-main-content", function(model) {
-     
+
+     <div ng-controller="SearchController as searchController" class="search-component form-group" >
+        <input id="search-text" class="form-control" type="text" placeholder="London..." ng-model="searchQuery" />
+        <input id="search-button" class="btn btn-primary" type="button" value="Search" ng-click="searchForMovies()" />
+      </div>
      <div ng-controller="MapController as mapController" class="full-screen">
         <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-        <!--<div class="search" ng-controller="SearchController as search">
-            <input class="search-text" type="text" placeholder="London..." ng-model="search.searchQuery" />
-            <input class="search-button" type="button" value="Search" ng-click="search.searchForMovies()" />
-        </div>-->
      </div>
-     
+
     })
     
     @html.block("page-scripts", function(model) {
-    
     <script src='/lib/lodash/lodash.js'></script>
     <script src='/lib/angular-simple-logger/dist/angular-simple-logger.js'></script>
     <script src='/lib/angular-google-maps/dist/angular-google-maps.js'></script>
