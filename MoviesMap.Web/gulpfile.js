@@ -10,12 +10,14 @@ gulp.task('sass', function () {
 });
 
 gulp.task('typescript', function () {
-    gulp.src('./Controllers/*.ts')
+    gulp.src('./Server/Typescript/**/*.ts')
 		.pipe(ts({
 			declaration: true,
-			noExternalResolve: true
+			noExternalResolve: true,
+            module: "commonjs",
+            removeComments: true
 		}))
-        .pipe(gulp.dest('./Controllers'));
+        .pipe(gulp.dest('./Server/Destination'));
 });
 
 gulp.task('default', function () {
