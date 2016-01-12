@@ -10,8 +10,8 @@
         <input id="search-button" class="btn btn-primary" type="button" value="Search" ng-click="searchForMovies()" />
       </div>
      <div id="map-component" ng-controller="MapController as mapController">
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-            <ui-gmap-markers models="markers.nearby" coords="markers.coords" icon="markers.icon"></ui-gmap-markers>    
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
+            <ui-gmap-markers models="markers.nearby" coords="'self'" icon="markers.icon"></ui-gmap-markers>    
         </ui-gmap-google-map>
      </div>
 

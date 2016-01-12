@@ -1,8 +1,8 @@
 (function (controllers){
 	// single point to init all app controllers
-	var homeController = require("./homeController");
+	var moviesController = require("./moviesController");
 	
 	controllers.init = function (app) {
-		homeController.init(app);
+		moviesController.init(app);
 	}
 })(module.exports);
