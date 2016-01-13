@@ -2,7 +2,7 @@
   "name": "MoviesMapWeb",
   "version": "0.0.0",
   "description": "MoviesMap Web",
-  "main": "server.js",
+  "main": "Server/Destination/server.js",
   "author": {
     "name": "Tomasz Kutyła, Tomasz Gawlik"
   },

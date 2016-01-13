@@ -24,11 +24,12 @@ gulp.task('default', function () {
 
   // watch for any changes in sass files 
   gulp.watch('./public/sass/**/*.scss', ['sass']);
-  gulp.watch('./Controllers/*.ts', ['typescript']);  
+  gulp.watch('./Server/Typescript/**/*.ts', ['typescript']);  
+  gulp.watch('./Server/Typescript/*.ts', ['typescript']);  
   
   // watch for any changes in js or html files 
   nodemon({
-    script: 'server.js',
+    script: 'Server/Destination/server.js',
     ext: 'js html',
     env: { 'NODE_ENV': 'development' }
   });

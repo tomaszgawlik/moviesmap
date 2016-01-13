@@ -2,12 +2,15 @@ import http = require('http');
 import express = require('express');
 
 var app = express();
-var controllers = require('./controllers/moviesController');
+var controllers = require('./Routers/moviesController');
 
 // set view engine
 app.set("view engine", "vash");
 // set public directory
-app.use(express.static(__dirname + "/public"));
+
+console.log(__dirname);
+
+app.use(express.static("../../" + __dirname + "/public"));
 
 app.use('/', controllers);
 // map to controller
