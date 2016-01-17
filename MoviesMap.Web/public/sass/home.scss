@@ -19,18 +19,20 @@
 	
 	position:fixed;
 	z-index: 1;
-    top: 10%;
+    top: 2%;
     left: 50%;
 	width: 50%;
 	margin-left: -25%;
 
 	#search-text {
-		width: 68%;
-		float:left;
+		width: 58%;
+		float: left;
 	}
 	
-	#search-button {
-		width: 30%;
+	.search-button {
+		width: 20%;
 		float: right;
+        margin-right: 3px;
+        line-height: 1.5; 
 	}
 }
