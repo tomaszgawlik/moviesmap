@@ -1,7 +1,8 @@
 (function (controllers){
+    "use strict";
 	// single point to init all app controllers
-	var moviesController = require("./moviesController");
-	
+	let moviesController = require("./moviesController");
+    
 	controllers.init = function (app) {
 		moviesController.init(app);
 	}

@@ -5,16 +5,15 @@
  
      @html.block("page-main-content", function(model) {
 
-     <div id="search-component" ng-controller="SearchController as searchController" class="form-group" >
-        <input id="search-text" class="form-control" type="text" placeholder="London, Paris, Casino Royale, House of Cards..." ng-model="searchQuery" />
-        <input class="search-button btn btn-primary fa" type="button" value="&#xf008; Movie" ng-click="searchForMovies()" />
-        <input class="search-button btn btn-success fa" type="button" value="&#xf041; Place" ng-click="searchForLocalizaton()" />
-      </div>
-      
      <div id="map-component" ng-controller="MapController as mapController">
-        <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
+         <div id="search-component" class="form-group" >
+            <input id="search-text" class="form-control" type="text" ng-model="searchQuery"/>
+            <input class="search-button btn btn-primary fa" type="button" value="&#xf008; Movie" ng-click="searchForMovies()" />
+            <input class="search-button btn btn-success fa" type="button" value="&#xf041; Place" ng-click="navigateAndFindMovies()" />
+          </div>
+          <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
             <ui-gmap-markers models="markers.nearby" coords="'self'" icon="markers.icon"></ui-gmap-markers>    
-        </ui-gmap-google-map>
+          </ui-gmap-google-map>
      </div>
 
     })
@@ -27,6 +26,5 @@
     
     <script src="/js/app.js"></script>
     <script src="/js/app/mapController.js"></script>
-    <script src="/js/app/searchController.js"></script>
     })
  })
