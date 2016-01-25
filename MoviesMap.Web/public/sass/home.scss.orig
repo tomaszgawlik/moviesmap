@@ -1,0 +1,52 @@
+#map-component {
+	height: 100%;
+	
+	.angular-google-map{
+		height: 100%;
+	}
+	
+	.angular-google-map-container 
+	{ 
+		height: 100%;
+	}
+}
+
+#search-component {
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
+	border: solid grey 1px;
+	
+	position:fixed;
+	z-index: 1;
+<<<<<<< HEAD
+    top: 2%;
+=======
+    top: 10%;
+>>>>>>> Połączenie wszystkich commitów
+    left: 50%;
+	width: 50%;
+	margin-left: -25%;
+
+	#search-text {
+<<<<<<< HEAD
+		width: 58%;
+		float: left;
+	}
+	
+	.search-button {
+		width: 20%;
+		float: right;
+        margin-right: 3px;
+        line-height: 1.5; 
+=======
+		width: 68%;
+		float:left;
+	}
+	
+	#search-button {
+		width: 30%;
+		float: right;
+>>>>>>> Połączenie wszystkich commitów
+	}
+}

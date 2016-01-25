@@ -12,9 +12,20 @@
     "vash": "^0.10.0"
   },
   "devDependencies": {
+    "grunt-karma": "*",
     "gulp": "^3.9.0",
     "gulp-nodemon": "^2.0.4",
     "gulp-sass": "^2.1.0",
-    "node-sass": "^3.4.2"
+    "gulp-update": "0.0.2",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-html-reporter": "^0.2.7",
+    "karma-htmlfile-reporter": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "*",
+    "node-sass": "^3.4.2",
+    "phantomjs": "*"
   }
 }
