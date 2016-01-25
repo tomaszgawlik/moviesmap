@@ -1,10 +1,10 @@
 (function (moviesController) {
-
-	var moviesService = require("../services/moviesService");
-    var bodyParser = require('body-parser');
+    "use strict";
+	let moviesService = require("../services/moviesService");
+	let geoCodingService = require("../services/geoCodingService");
+    let bodyParser = require('body-parser');
 
 	moviesController.init = function (app) {
-            
         // for post requests
         app.use(bodyParser.json()); 
 
@@ -13,8 +13,24 @@
 		});
 
 		app.post("/movies/nearby", function (req, res) {
-			var movies = moviesService.getNearbyMovies(req.body.latitude, req.body.longitude);
+			let movies = moviesService.getNearbyMovies(req.body.center);
 			res.json(movies);
+		});
+        
+        app.post("/movies/navigate", function (req, res) {
+            let place = req.body.place;
+            
+            geoCodingService.localize(place, (center) => {
+            
+                let movies = moviesService.getNearbyMovies(center);
+            
+                let response = {
+                    center: center,
+                    movies: movies
+                };
+
+                res.json(response);
+            });
 		});
 
 	};

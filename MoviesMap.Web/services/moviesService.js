@@ -1,29 +1,27 @@
 (function(service) {
-	
-	service.getNearbyMovies = function (latitude, longitude) {
+	"use strict";
+	service.getNearbyMovies = function (center) {
         
-        console.log("Log service: "+ latitude + ", " + longitude);
-        
-        var markers = [];
+        let markers = [];
         
         // TODO: replace with serious code
         markers.push({
                 id: 0,
-				latitude: latitude,
-				longitude: longitude,
+				latitude: center.lat,
+				longitude: center.lng,
 				title: "London"
 			});
         markers.push({
                 id: 1,
-				latitude: latitude + 0.1,
-				longitude: longitude,
+				latitude: center.lat + 0.1,
+				longitude: center.lng,
 				title: "London"
 			});
             
         markers.push({
                 id: 2,
-				latitude: latitude - 0.1,
-				longitude: longitude,
+				latitude: center.lat - 0.1,
+				longitude: center.lng,
 				title: "London"
 			});
 		return markers;
