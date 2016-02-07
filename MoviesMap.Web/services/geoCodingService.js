@@ -4,7 +4,7 @@
     let bufferHelper = require("../services/bufferHelperService");
     let googleGeocodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?";
 
-    service.localize = function (place, onResponse) {
+    service.localize = (place, onResponse) => {
         let addressRequest = googleGeocodingUrl + "address=" + encodeURIComponent(place);
 
         https.get(addressRequest, (response) => {
