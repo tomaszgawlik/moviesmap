@@ -1,7 +1,7 @@
 (function (service) {
     "use strict";
     let https = require("https");
-    let bufferHelper = require("../services/bufferHelperService");
+    let bufferHelper = require("./bufferHelperService");
     let googleGeocodingUrl = "https://maps.googleapis.com/maps/api/geocode/json?";
 
     service.localize = (place, onResponse) => {

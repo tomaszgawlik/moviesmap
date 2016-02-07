@@ -1,7 +1,7 @@
 (function (viewModelBuilder) {
     "use strict";
-    let moviesSource = require("../services/moviesService");
-    let moviesImdbDecorator = require("../services/moviesImdbDecorator");
+    let moviesSource = require("./moviesService");
+    let moviesImdbDecorator = require("./moviesImdbDecorator");
     
     viewModelBuilder.build = (localizationCenter, onResult) => {
 
