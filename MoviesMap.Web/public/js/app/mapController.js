@@ -52,6 +52,8 @@ angular.module('moviesMapApp')
                     var center = response.data.center;
                     var movies = response.data.movies;
 
+                    console.log(JSON.stringify(movies, null, 4));
+                    
                     $scope.markers.nearby = movies;
                     $scope.map.center = {
                         latitude: center.lat,
