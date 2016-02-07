@@ -12,7 +12,24 @@
             <input class="search-button btn btn-success fa" type="button" value="&#xf041; Place" ng-click="navigateAndFindMovies()" />
           </div>
           <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
-            <ui-gmap-markers models="markers.nearby" coords="'self'" icon="markers.icon"></ui-gmap-markers>    
+            <ui-gmap-markers models="markers.nearby" coords="'self'" icon="markers.icon">
+                <ui-gmap-windows show="show">
+                    <div class="container movie-window">
+                        <!--TODO: extract to seperate view -->
+                        <div class="row">
+                            <div class="col-md-8" ng-non-bindable>
+                                <a href="http://www.imdb.com/title/{{imdbId}}"><strong>{{title}}</strong></a></div>
+                            <div class="col-md-4" ng-non-bindable>Rating:<span class="nowrap"> </span>{{rating}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" ng-non-bindable>Year: {{year}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 poster-row" ng-non-bindable><img class="movie-poster-img" src="{{poster}}" alt = "poster"></div>
+                        </div>
+                    </div>
+                </ui-gmap-windows>
+            </ui-gmap-markers>    
           </ui-gmap-google-map>
      </div>
 
