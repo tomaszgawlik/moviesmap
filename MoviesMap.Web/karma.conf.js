@@ -70,7 +70,7 @@ module.exports = function(config) {
       outputFile: 'tests/index.html',
 
       // Optional
-      pageTitle: 'Zajebiste testy jednostkowe',
+      pageTitle: 'Unit tests result',
       subPageTitle: '☺'
     }
 
