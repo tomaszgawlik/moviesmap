@@ -1,7 +1,7 @@
 (function (service) {
     "use strict";
 
-    service.bufferArrayToObject = function(bufferArray) {
+    service.bufferArrayToObject = (bufferArray) => {
         bufferArray = Buffer.concat(bufferArray);
         let parsedObject = JSON.parse(bufferArray.toString());
         return parsedObject;
