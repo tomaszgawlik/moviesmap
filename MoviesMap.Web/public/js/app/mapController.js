@@ -39,6 +39,24 @@ angular.module('moviesMapApp')
 
         $scope.searchForMovies = function () {
             console.log("Search for movies with query: " + $scope.searchQuery);
+            var request = {
+                movieName: $scope.searchQuery
+            };
+
+            $http.post('/movie/navigate', request)
+                .then(function (response) {
+
+                    var center = response.data.center;
+                    var movies = response.data.movies;
+                    
+                    $scope.markers.nearby = movies;
+                    $scope.map.center = {
+                        latitude: center.lat,
+                        longitude: center.lng
+                    }
+                }, function (errorResponse) {
+                    console.log(errorResponse);
+                });
         };
 
         $scope.navigateAndFindMovies = function () {

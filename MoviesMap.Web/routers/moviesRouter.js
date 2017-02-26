@@ -17,6 +17,13 @@
             });
         });
 
+        app.post("/movie/navigate", (req, res) => {
+            let name = req.body.movieName;
+            moviesController.navigateByMovie(name, (response)=> {
+                res.json(response);
+            })
+        });
+
         app.post("/movies/navigate", (req, res) => {
             let place = req.body.place;
 
