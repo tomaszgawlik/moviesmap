@@ -5,8 +5,29 @@
     let imdbApiURL = "http://www.omdbapi.com/";
 
     service.findMovie = (moviewName, onResult) => {
-        var addressRequest = imdbApiURL + '?t=' + moviewName + '&y=&plot=full&r=json';
+        var addressRequest = imdbApiURL + '?s=' + moviewName + '&y=&plot=full&r=json';
+        http.get(addressRequest, (response) => {
+            let bufferArray = [];
 
+            response.on('data', (chunk) => {
+                bufferArray.push(chunk);
+            });
+            response.on('end', () => {
+                let moviesCollection = bufferHelper.bufferArrayToObject(bufferArray);
+
+                // workaround -> get information of first found element from search query.
+                console.log(moviesCollection);
+
+                if (moviesCollection.Search != undefined)
+                    service.getMovieById(moviesCollection.Search[0].imdbID, (firstMovieResult) => {
+                        onResult(firstMovieResult);
+                    });
+            });
+        });
+    };
+
+    service.getMovieById = (movieId, onResult) => {
+        var addressRequest = imdbApiURL + '?i=' + movieId + '&y=&plot=full&r=json';
         http.get(addressRequest, (response) => {
             let bufferArray = [];
 
@@ -18,7 +39,7 @@
                 onResult(movieInfo);
             });
         });
-    };
+    }
 
     service.getNearbyMovies = (center, onResult) => {
         let markers = [];
